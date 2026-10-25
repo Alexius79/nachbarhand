@@ -1,0 +1,768 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Nachbarhand Mockups</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+<style>
+/* Layout: Erklärspalte links, klickbares Handy rechts. Bewusst nur helles Theme (Wunsch: heller Hintergrund). */
+:root{
+  --page:#E9EEF2; --screen:#FAFCFD; --ink:#18232E; --muted:#5B6976; --line:#DCE4EA;
+  --green:#17866B; --green-dk:#0F6B55; --green-soft:#DCF1EA;
+  --amber:#E2902A; --amber-soft:#FCEED8; --amber-ink:#8A4E07;
+  --sky:#A6DDF6; --rose:#FFB4A2;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{background:var(--page);color:var(--ink)}
+body{font-family:var(--body);font-size:16px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:start}
+
+/* Erklärspalte */
+.intro{padding-top:24px;min-width:0}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:20px;color:var(--green-dk)}
+.brand svg{width:34px;height:34px}
+.intro h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1.05;margin:18px 0 12px;text-wrap:balance;letter-spacing:-.01em}
+.intro p{color:var(--muted);max-width:44ch;margin:0 0 22px}
+.label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:26px 0 10px}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;counter-reset:s}
+.steps button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:12px;align-items:center;width:100%;padding:9px 12px;border-radius:12px;counter-increment:s}
+.steps button::before{content:counter(s);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:700;flex:none}
+.steps button:hover{background:#fff}
+.steps button[aria-current="true"]{background:#fff;box-shadow:0 1px 0 var(--line)}
+.steps button[aria-current="true"]::before{background:var(--green);color:#fff;border-color:var(--green)}
+.steps button:focus-visible{outline:3px solid var(--amber)}
+.steps small{display:block;color:var(--muted);font-size:13px}
+.later{display:flex;flex-wrap:wrap;gap:8px}
+.later span{background:#fff;border:1px dashed #B9C6D1;border-radius:999px;padding:5px 12px;font-size:14px;color:var(--muted)}
+
+/* Handy */
+.phone{width:390px;height:800px;border:10px solid #1B2530;border-radius:48px;background:var(--screen);overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 30px 60px -30px rgba(24,35,46,.45)}
+.status{display:flex;justify-content:space-between;padding:12px 26px 4px;font-size:13px;font-weight:700;flex:none}
+.status .notch{width:96px;height:24px;border-radius:14px;background:#1B2530;margin-top:-6px}
+.screens{flex:1;position:relative;min-height:0}
+.screen{position:absolute;inset:0;overflow-y:auto;padding:8px 20px 20px;display:flex;flex-direction:column}
+.screen[hidden]{display:none!important}
+.screen > *{flex-shrink:0}
+.screen.enter{animation:enter .35s ease}
+@keyframes enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* Tabbar */
+.tabbar{flex:none;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);background:#fff;padding:8px 10px 14px}
+.tab{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;font-weight:700;color:var(--muted);padding:4px 0;border-radius:14px;position:relative}
+.tab .ico{width:44px;height:30px;border-radius:15px;display:grid;place-items:center;transition:background .2s}
+.tab svg{width:22px;height:22px}
+.tab[aria-current="true"]{color:var(--green-dk)}
+.tab[aria-current="true"] .ico{background:var(--green-soft)}
+.tab.helper[aria-current="true"]{color:var(--amber-ink)}
+.tab.helper[aria-current="true"] .ico{background:var(--amber-soft)}
+.tab:focus-visible{outline:3px solid var(--amber)}
+.tab.glow .ico{background:var(--amber-soft);animation:glow 1.4s ease-in-out infinite}
+.tab.glow.hilfe .ico{background:var(--green-soft);animation-name:glowg}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(226,144,42,.55)}50%{box-shadow:0 0 0 10px rgba(226,144,42,0),0 0 18px 4px rgba(226,144,42,.55)}}
+@keyframes glowg{0%,100%{box-shadow:0 0 0 0 rgba(23,134,107,.5)}50%{box-shadow:0 0 0 10px rgba(23,134,107,0),0 0 18px 4px rgba(23,134,107,.45)}}
+
+/* Gemeinsame Bausteine */
+h2{font-family:var(--display);font-weight:800;font-size:26px;line-height:1.1;margin:6px 0 4px;letter-spacing:-.01em;text-wrap:balance}
+.sub{color:var(--muted);margin:0 0 14px;font-size:15px}
+.btn{border:0;border-radius:16px;padding:15px 18px;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;transition:transform .1s, background .2s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn.primary{background:var(--green);color:#fff}
+.btn.primary:hover{background:var(--green-dk)}
+.btn.helper{background:var(--amber);color:#2B1A03}
+.btn.ghost{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:#B9C6D1}
+.btn[disabled]{background:var(--green-soft);color:var(--green-dk);cursor:default}
+.back{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:4px;color:var(--muted);font-weight:700;font-size:15px;padding:4px 0;margin-bottom:4px}
+.back:focus-visible{outline:3px solid var(--amber)}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:15px;font-weight:700;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--amber-soft);border-color:var(--amber);color:var(--amber-ink)}
+.badge{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;border-radius:999px;padding:3px 9px}
+.badge.new{background:var(--amber);color:#2B1A03}
+.badge.soon{background:#EEF2F5;color:var(--muted);border:1px dashed #B9C6D1}
+.badge.cat{background:var(--green-soft);color:var(--green-dk)}
+
+/* Start */
+.hero{position:relative;width:100%;max-width:300px;margin:4px auto 0;aspect-ratio:1/1.05}
+.hero > svg{width:100%;height:100%}
+.orbit{position:absolute;width:44px;height:44px;border-radius:14px;background:#fff;box-shadow:0 6px 16px -6px rgba(24,35,46,.25);display:grid;place-items:center;animation:float 5s ease-in-out infinite}
+.orbit svg{width:22px;height:22px}
+.orbit:nth-child(2){left:2%;top:18%}
+.orbit:nth-child(3){right:0;top:6%;animation-delay:-1.2s}
+.orbit:nth-child(4){left:6%;top:52%;animation-delay:-2.4s}
+.orbit:nth-child(5){right:2%;top:40%;animation-delay:-3.6s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.genie-wave{transform-origin:85px 97px;animation:wave 2.6s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-14deg)}80%{transform:rotate(8deg)}90%{transform:rotate(-10deg)}}
+.genie-bob{animation:bob 4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.speech{background:#fff;border:1px solid var(--line);border-radius:18px 18px 18px 6px;padding:10px 14px;font-size:16px;margin:-4px auto 14px;max-width:290px;text-align:center}
+.speech b{font-family:var(--display)}
+.home-actions{display:flex;flex-direction:column;gap:10px;margin-top:auto}
+
+/* Profil */
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label,.field .lbl{font-weight:700;font-size:14px}
+.field input,.field select{border:1.5px solid var(--line);border-radius:12px;padding:12px;font:inherit;background:#fff;color:var(--ink);width:100%}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg .chip[aria-pressed="true"]{background:var(--green-soft);border-color:var(--green);color:var(--green-dk)}
+.hint{font-size:13px;color:var(--muted);background:#F1F5F8;border-radius:12px;padding:10px 12px;margin-bottom:14px}
+
+/* Chat */
+.chat-head{display:flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:1px solid var(--line);margin:0 -20px;padding-inline:20px;flex:none}
+.avatar{width:40px;height:40px;border-radius:50%;background:#EAF7FD;flex:none;overflow:hidden}
+.avatar svg{width:100%;height:100%}
+.chat-head b{font-family:var(--display);font-size:17px;display:block}
+.chat-head small{color:var(--green);font-weight:700;font-size:13px}
+#chat .log{flex:1;display:flex;flex-direction:column;gap:10px;padding:14px 0 8px}
+.msg{display:flex;gap:8px;align-items:flex-end;max-width:92%;animation:enter .3s ease}
+.msg .bubble{padding:10px 14px;border-radius:18px;font-size:16px}
+.msg.genie .bubble{background:#fff;border:1px solid var(--line);border-bottom-left-radius:6px}
+.msg.genie .avatar{width:30px;height:30px}
+.msg.user{align-self:flex-end}
+.msg.user .bubble{background:var(--green);color:#fff;border-bottom-right-radius:6px}
+.msg.user .bubble .via{display:block;font-size:11px;opacity:.8;margin-top:2px}
+.typing span{display:inline-block;width:7px;height:7px;border-radius:50%;background:#A7B4BF;margin:0 2px;animation:dot 1s infinite}
+.typing span:nth-child(2){animation-delay:.15s}.typing span:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
+.dock{position:sticky;bottom:-20px;margin:0 -20px -20px;padding:10px 20px 16px;background:linear-gradient(to bottom,rgba(250,252,253,0),var(--screen) 18px);flex:none}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;justify-content:flex-end}
+.opts .chip{border-color:var(--green);color:var(--green-dk)}
+.opts .chip:hover{background:var(--green-soft)}
+.microw{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:6px 6px 6px 16px}
+.microw .ph{flex:1;color:var(--muted);font-size:15px;min-width:0}
+.mic{width:52px;height:52px;border-radius:50%;border:0;background:var(--green);color:#fff;display:grid;place-items:center;flex:none}
+.mic svg{width:24px;height:24px}
+.mic.listening{background:#E0533D;animation:micp 1s infinite}
+@keyframes micp{0%,100%{box-shadow:0 0 0 0 rgba(224,83,61,.5)}50%{box-shadow:0 0 0 10px rgba(224,83,61,0)}}
+.wave{display:none;gap:3px;align-items:center;height:20px}
+.listening-on .wave{display:flex}
+.listening-on .ph-text{display:none}
+.wave i{width:3px;border-radius:2px;background:#E0533D;animation:wv .6s ease-in-out infinite alternate}
+.wave i:nth-child(odd){animation-delay:-.3s}
+@keyframes wv{from{height:4px}to{height:18px}}
+.price-box{margin-top:8px;display:flex;flex-direction:column;gap:10px}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.stepper{display:flex;align-items:center;gap:6px}
+.stepper button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:#fff;font-weight:700;font-size:18px;line-height:1}
+.stepper output{min-width:54px;text-align:center;font-family:var(--display);font-weight:800;font-size:20px;font-variant-numeric:tabular-nums}
+.price-note{font-size:13px;color:var(--muted)}
+
+/* Zusammenfassung */
+.summary{background:#fff;border:1px solid var(--line);border-radius:22px;padding:6px 18px;margin-bottom:16px}
+.summary .top{display:flex;align-items:center;justify-content:space-between;padding:12px 0 10px;border-bottom:1px solid var(--line)}
+.summary .top b{font-family:var(--display);font-size:22px}
+.row{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);align-items:start}
+.row:last-child{border-bottom:0}
+.row svg{width:22px;height:22px;color:var(--green);margin-top:1px}
+.row small{display:block;color:var(--muted);font-size:13px}
+.row span{font-weight:700}
+.sent-note{display:flex;gap:10px;align-items:flex-start;background:var(--green-soft);border-radius:16px;padding:12px 14px;margin-top:12px;color:var(--green-dk);font-size:15px;animation:enter .35s ease}
+.sent-note svg{width:22px;height:22px;flex:none}
+.pointer{margin-top:10px;text-align:right;color:var(--amber-ink);font-weight:700;font-size:14px;animation:enter .35s ease}
+.pointer svg{width:18px;height:18px;vertical-align:-4px;animation:nudge 1s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+/* Auftragsmonitor */
+.helper-me{display:flex;align-items:center;gap:10px;background:var(--amber-soft);border-radius:16px;padding:10px 12px;margin-bottom:12px}
+.me-pic{width:40px;height:40px;border-radius:50%;background:#F3C9A6;display:grid;place-items:center;font-family:var(--display);font-weight:800;color:#6B3A12;flex:none}
+.helper-me b{display:block}
+.helper-me small{color:var(--amber-ink);font-size:13px}
+.filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin:0 -20px 4px;padding-inline:20px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filter-meta{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted);margin:6px 0 10px}
+.filter-meta select{border:1.5px solid var(--line);border-radius:10px;padding:5px 8px;font:inherit;font-size:14px;background:#fff;color:var(--ink)}
+.jobs{display:flex;flex-direction:column;gap:10px}
+.job{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:4px 10px}
+.job:hover{border-color:#B9C6D1}
+.job:focus-visible{outline:3px solid var(--amber)}
+.job.fresh{border:2px solid var(--amber);box-shadow:0 8px 20px -12px rgba(226,144,42,.7)}
+.job b{font-family:var(--display);font-size:18px}
+.job .price{font-family:var(--display);font-weight:800;font-size:18px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.job .meta{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:4px 12px;color:var(--muted);font-size:14px}
+.job .tags{grid-column:1 / -1;display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.empty{color:var(--muted);text-align:center;padding:30px 10px;background:#fff;border-radius:18px;border:1px dashed var(--line)}
+
+/* Auftragsdetail */
+.mapbox{height:110px;border-radius:16px;background:#E4EEE6;position:relative;overflow:hidden;margin:8px 0 12px}
+.mapbox svg{width:100%;height:100%}
+.offer{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px;margin:4px 0 14px}
+.offer .price-row b{font-size:16px}
+.offer .range{font-size:14px;color:var(--muted);margin-bottom:10px}
+.offer .verdict{font-size:14px;font-weight:700;margin-top:10px;padding:8px 10px;border-radius:10px}
+.verdict.ok{background:var(--green-soft);color:var(--green-dk)}
+.verdict.counter{background:var(--amber-soft);color:var(--amber-ink)}
+
+/* Gegenvorschlag */
+.helper-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:14px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;margin:10px 0}
+.helper-card .tags{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px}
+.bigprice{grid-column:1 / -1;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:10px}
+.bigprice strong{font-family:var(--display);font-size:30px;font-variant-numeric:tabular-nums}
+.bigprice s{color:var(--muted)}
+.btn-row{display:flex;flex-direction:column;gap:10px;margin-top:auto}
+
+/* Handschlag */
+.deal{text-align:center;justify-content:flex-start}
+.deal-art{width:100%;max-width:310px;margin:6px auto 0}
+.deal-art svg{width:100%;height:auto}
+.shake{animation:shake .5s ease-in-out 4}
+@keyframes shake{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.spark{transform-box:fill-box;transform-origin:center;animation:spark 1.6s ease-in-out infinite}
+.spark:nth-of-type(2){animation-delay:.4s}.spark:nth-of-type(3){animation-delay:.8s}
+@keyframes spark{0%,100%{opacity:.2;transform:scale(.6)}50%{opacity:1;transform:scale(1)}}
+.deal h2{font-size:30px;color:var(--green-dk)}
+.deal .summary{text-align:left}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media (max-width:860px){
+  .wrap{grid-template-columns:1fr;gap:20px;justify-items:center}
+  .intro{padding-top:0;width:100%;max-width:520px}
+  .intro p{margin-bottom:8px}
+  .steps{flex-direction:row;overflow-x:auto;padding-bottom:6px}
+  .steps li{flex:none}
+  .steps small{display:none}
+  .steps button{white-space:nowrap;padding:6px 10px}
+  .later-wrap{display:none}
+}
+@media (max-width:440px){
+  body{padding-block:16px}
+  .phone{width:100%;height:760px;border-width:6px;border-radius:34px}
+  .status{padding-inline:20px}
+}
+</style>
+
+<!-- Gemeinsame Verläufe (nicht display:none, damit sie überall greifen) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gGenie" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FD3FF"/><stop offset="1" stop-color="#BDF2DC"/></linearGradient>
+    <linearGradient id="gLamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6C27A"/><stop offset="1" stop-color="#D9824B"/></linearGradient>
+    <radialGradient id="gSkin" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#FCE0CA"/><stop offset=".55" stop-color="#EDB894"/><stop offset="1" stop-color="#CD8E69"/></radialGradient>
+    <linearGradient id="gHair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6B4D37"/><stop offset="1" stop-color="#2E2119"/></linearGradient>
+    <linearGradient id="gShirt" x1="0" y1="0" x2="1" y2=".3"><stop offset="0" stop-color="#5C9CC6"/><stop offset=".55" stop-color="#2F6E98"/><stop offset="1" stop-color="#1E4D6F"/></linearGradient>
+    <linearGradient id="gApron" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F3D9B1"/><stop offset=".6" stop-color="#DDB27E"/><stop offset="1" stop-color="#B98552"/></linearGradient>
+    <linearGradient id="gBelt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9A6740"/><stop offset="1" stop-color="#5B371D"/></linearGradient>
+    <linearGradient id="gMetal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DDE4EA"/><stop offset=".5" stop-color="#8E9BA7"/><stop offset="1" stop-color="#5E6B77"/></linearGradient>
+    <linearGradient id="gBase" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C47A45"/><stop offset="1" stop-color="#8A4E26"/></linearGradient>
+    <linearGradient id="gLampDk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F0B26C"/><stop offset="1" stop-color="#B86A36"/></linearGradient>
+    <radialGradient id="gLampShade" cx=".35" cy=".2" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#6E3412" stop-opacity=".35"/></radialGradient>
+    <linearGradient id="gBeam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#FFE3A3" stop-opacity=".95"/><stop offset="1" stop-color="#FFF4D8" stop-opacity="0"/></linearGradient>
+    <linearGradient id="gFade" gradientUnits="userSpaceOnUse" x1="0" y1="120" x2="0" y2="152"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+    <mask id="mFade" maskUnits="userSpaceOnUse" x="0" y="0" width="220" height="220"><rect width="220" height="220" fill="url(#gFade)"/></mask>
+    <filter id="fSoft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#18232E" flood-opacity=".18"/></filter>
+    <linearGradient id="gGreen" x1="0" y1="0" x2="1" y2=".4"><stop offset="0" stop-color="#2FA585"/><stop offset="1" stop-color="#0F6B55"/></linearGradient>
+    <radialGradient id="gGlow"><stop offset="0" stop-color="#FFF1C9" stop-opacity=".95"/><stop offset="1" stop-color="#FFF1C9" stop-opacity="0"/></radialGradient>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <section class="intro">
+    <div class="brand"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DCF1EA"/><path d="M11 22c3-1 5-4 9-4s6 3 9 4M14 24c2 2 4 3 6 3s4-1 6-3" stroke="#17866B" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="20" cy="12" r="3.2" fill="#E2902A"/></svg>Nachbarhand</div>
+    <h1>Klick dich durch den ersten Auftrag</h1>
+    <p>Mockup zum Durchklicken. Starte auf dem Handy rechts oder springe direkt zu einem Schritt. Tippe im Dialog aufs Mikrofon, dann „spricht“ das Mockup die erste Antwort für dich.</p>
+    <div class="label">Ablauf</div>
+    <ol class="steps" id="steps">
+      <li><button data-go="home">Start mit dem Alleskönner<small>Lampe, Alleskönner, drei Knöpfe</small></button></li>
+      <li><button data-go="profil">Profil anlegen<small>Für mich oder für Angehörige</small></button></li>
+      <li><button data-go="chat">Hilfe-Dialog<small>Geist fragt Ort, Umfang, Zeit, Preis</small></button></li>
+      <li><button data-go="summary">Auftrag absenden<small>Zusammenfassung, Helfer-Knopf leuchtet</small></button></li>
+      <li><button data-go="monitor">Auftragsmonitor<small>Helfer filtert und wählt aus</small></button></li>
+      <li><button data-go="job">Preis annehmen oder Gegenvorschlag<small>Helfer nennt seinen Preis</small></button></li>
+      <li><button data-go="gegen">Gegenvorschlag bestätigen<small>Auftraggeber entscheidet</small></button></li>
+      <li><button data-go="deal">Handschlag<small>„Auftrag ist platziert“</small></button></li>
+    </ol>
+    <div class="later-wrap">
+      <div class="label">Kommt später</div>
+      <div class="later"><span>Helfer-Prüfung (Ausweis, Führungszeugnis)</span><span>Bewertungen und Rating</span><span>Bezahlung</span><span>Chat mit dem Helfer</span></div>
+    </div>
+  </section>
+
+  <div class="phone" id="phone">
+    <div class="status"><span>9:41</span><span class="notch"></span><span>5G ▮</span></div>
+    <div class="screens">
+
+      <!-- 1 Start -->
+      <section class="screen" id="home">
+        <div class="hero">
+          <svg viewBox="0 0 200 220" role="img" aria-label="Moderne Lampe, aus der ein Alleskönner mit Schürze und Werkzeuggürtel aufsteigt" id="heroGenie"></svg>
+          <div class="orbit" title="Garten"><svg viewBox="0 0 24 24" fill="none" stroke="#17866B" stroke-width="2" stroke-linecap="round"><path d="M5 19c0-8 6-13 14-14-1 8-6 14-14 14zM5 19l7-7"/></svg></div>
+          <div class="orbit" title="Einkauf"><svg viewBox="0 0 24 24" fill="none" stroke="#E2902A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8zM9 8a3 3 0 0 1 6 0"/></svg></div>
+          <div class="orbit" title="Handwerk"><svg viewBox="0 0 24 24" fill="none" stroke="#3E7CB1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5.5a4 4 0 0 0-5 5L4 16l4 4 5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5z"/></svg></div>
+          <div class="orbit" title="Technik"><svg viewBox="0 0 24 24" fill="none" stroke="#7A5BC4" stroke-width="2" stroke-linecap="round"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></div>
+        </div>
+        <p class="speech" id="homeSpeech">Hallo, ich bin dein <b>Alleskönner</b>. Sag mir einfach, was erledigt werden soll.</p>
+        <div class="home-actions">
+          <button class="btn primary" data-go="chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10M8 9l4 4 4-4"/><path d="M5 13v4a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4v-4"/></svg>Ich brauche Hilfe</button>
+          <button class="btn helper" data-go="monitor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a2 2 0 0 1 4 0v4M11 10V4a2 2 0 0 1 4 0v6M15 9V6a2 2 0 0 1 4 0v7a8 8 0 0 1-8 8h-1a6 6 0 0 1-5-3l-2-4a2 2 0 0 1 3.5-2L7 13"/></svg>Ich bin Helfer</button>
+          <button class="btn ghost" data-go="profil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Profil anlegen</button>
+        </div>
+      </section>
+
+      <!-- 2 Profil -->
+      <section class="screen" id="profil" hidden>
+        <button class="back" data-go="home">‹ Zurück</button>
+        <h2>Profil anlegen</h2>
+        <p class="sub">Dauert eine Minute. Du kannst auch für jemand anderen Aufträge anlegen.</p>
+        <div class="field"><label for="pName">Dein Name</label><input id="pName" value="Alexander H."></div>
+        <div class="field"><span class="lbl">Ich nutze Nachbarhand …</span>
+          <div class="seg" data-seg>
+            <button class="chip" aria-pressed="false">für mich</button>
+            <button class="chip" aria-pressed="true">für Angehörige</button>
+            <button class="chip" aria-pressed="false">als Helfer</button>
+          </div>
+        </div>
+        <div class="field"><label for="pRel">Für wen hauptsächlich?</label><input id="pRel" value="Gisela H. (Mutter), Gartenstraße 5, Kassel"></div>
+        <div class="field"><label for="pAdr">Deine Adresse</label><input id="pAdr" value="Lindenweg 12, 34117 Kassel"></div>
+        <p class="hint">Wer als Helfer arbeiten will, wird vorher geprüft (Ausweis, später auch Führungszeugnis). Das kommt im nächsten Ausbauschritt.</p>
+        <button class="btn primary" id="saveProfile">Profil speichern</button>
+      </section>
+
+      <!-- 3 Chat -->
+      <section class="screen" id="chat" hidden>
+        <div class="chat-head">
+          <button class="back" data-go="home" aria-label="Zurück">‹</button>
+          <div class="avatar" data-head></div>
+          <div><b>Dein Alleskönner</b><small>hört zu</small></div>
+        </div>
+        <div class="log" id="log" aria-live="polite"></div>
+        <div class="dock">
+          <div class="opts" id="opts"></div>
+          <div class="microw" id="microw">
+            <span class="ph"><span class="ph-text">Tippe aufs Mikrofon und sprich</span><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+            <button class="mic" id="mic" aria-label="Sprechen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Zusammenfassung -->
+      <section class="screen" id="summary" hidden>
+        <button class="back" data-go="chat">‹ Ändern</button>
+        <h2>Dein Auftrag</h2>
+        <p class="sub">Bitte kurz prüfen. Danach sehen ihn Helfer in der Nähe.</p>
+        <div class="summary" id="sumCard"></div>
+        <button class="btn primary" id="sendBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l16-8-6 16-3-6-7-2z"/></svg>Absenden</button>
+        <div id="sentArea"></div>
+      </section>
+
+      <!-- 5 Auftragsmonitor -->
+      <section class="screen" id="monitor" hidden>
+        <h2>Auftragsmonitor</h2>
+        <div class="helper-me">
+          <div class="me-pic">J</div>
+          <div><b>Jonas K. · Helfer</b><small>Prüfung und Rating folgen später</small></div>
+        </div>
+        <div class="filters" id="filters"></div>
+        <div class="filter-meta"><span id="count"></span>
+          <label>Umkreis <select id="radius"><option value="2">2 km</option><option value="5" selected>5 km</option><option value="10">10 km</option></select></label>
+        </div>
+        <div class="jobs" id="jobs"></div>
+      </section>
+
+      <!-- 6 Auftragsdetail -->
+      <section class="screen" id="job" hidden>
+        <button class="back" data-go="monitor">‹ Alle Aufträge</button>
+        <div id="jobBody"></div>
+      </section>
+
+      <!-- 7 Gegenvorschlag beim Auftraggeber -->
+      <section class="screen" id="gegen" hidden>
+        <div class="chat-head" style="margin-bottom:12px">
+          <div class="avatar" data-head></div>
+          <div><b>Dein Alleskönner</b><small>Neues Angebot</small></div>
+        </div>
+        <div class="msg genie" style="max-width:100%"><div class="bubble" id="gegenText"></div></div>
+        <div class="helper-card" id="gegenCard"></div>
+        <div class="btn-row">
+          <button class="btn primary" id="acceptCounter"></button>
+          <button class="btn ghost" id="declineCounter">Ablehnen, auf andere warten</button>
+        </div>
+      </section>
+
+      <!-- 8 Handschlag -->
+      <section class="screen deal" id="deal" hidden>
+        <div class="deal-art">
+          <svg viewBox="0 0 260 200" role="img" aria-label="Ein Kunde und der Alleskönner geben sich die Hand">
+            <ellipse cx="130" cy="196" rx="110" ry="6" fill="rgba(24,35,46,.07)"/>
+            <circle cx="196" cy="86" r="58" fill="url(#gGlow)"/>
+            <!-- Mensch -->
+            <path d="M28 200 C28 152 44 122 70 122 C96 122 112 152 112 200 Z" fill="url(#gGreen)" filter="url(#fSoft)"/>
+            <circle cx="70" cy="94" r="22" fill="url(#gSkin)"/>
+            <path d="M48 90 C46 66 94 64 92 88 C84 79 60 78 48 90 Z" fill="url(#gHair)"/>
+            <circle cx="63" cy="96" r="2.4" fill="#18232E"/><circle cx="78" cy="96" r="2.4" fill="#18232E"/>
+            <path d="M63 104 Q70.5 110 78 104" stroke="#18232E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <g id="dealHelper" transform="translate(84,22)"></g>
+            <!-- Hände -->
+            <g class="shake">
+              <path d="M98 146 C112 140 120 130 128 126" stroke="url(#gGreen)" stroke-width="16" stroke-linecap="round" fill="none"/>
+              <path d="M168 119 L154 128" stroke="url(#gShirt)" stroke-width="13" stroke-linecap="round"/>
+              <path d="M154 128 L142 124.5" stroke="url(#gSkin)" stroke-width="9.5" stroke-linecap="round"/>
+              <circle cx="131" cy="125" r="10" fill="url(#gSkin)"/>
+              <ellipse cx="140" cy="123" rx="8.5" ry="7.5" fill="url(#gSkin)"/>
+              <path d="M134 117 C137 115 140 116 141 118" stroke="#E9AE87" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            </g>
+            <path class="spark" d="M134 88 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="#E2902A"/>
+            <path class="spark" d="M112 100 l2 4.5 4.5 2 -4.5 2 -2 4.5 -2 -4.5 -4.5 -2 4.5 -2z" fill="#17866B"/>
+            <path class="spark" d="M158 96 l2 4.5 4.5 2 -4.5 2 -2 4.5 -2 -4.5 -4.5 -2 4.5 -2z" fill="#8FD3FF"/>
+          </svg>
+        </div>
+        <h2>Auftrag ist platziert</h2>
+        <p class="sub" id="dealSub"></p>
+        <div class="summary" id="dealCard"></div>
+        <button class="btn ghost" id="restart" style="margin-top:auto">Neuen Auftrag starten</button>
+      </section>
+    </div>
+
+    <nav class="tabbar" aria-label="Hauptnavigation">
+      <button class="tab" data-tab="home" data-go="home"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-5h4v5"/></svg></span>Start</button>
+      <button class="tab hilfe" data-tab="hilfe" data-go="chat"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-11.5 7.2L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg></span>Hilfe suchen</button>
+      <button class="tab helper" data-tab="helfer" data-go="monitor"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a2 2 0 0 1 4 0v4M11 10V4a2 2 0 0 1 4 0v6M15 9V6a2 2 0 0 1 4 0v7a8 8 0 0 1-8 8h-1a6 6 0 0 1-5-3l-2-4a2 2 0 0 1 3.5-2L7 13"/></svg></span>Helfer</button>
+    </nav>
+  </div>
+</div>
+
+<script>
+(function(){
+const SKIN_SHADE = '#D99A74';
+function headSVG(){ return `
+    <path d="M104 72 L116 72 L117.5 88 L102.5 88 Z" fill="${SKIN_SHADE}"/>
+    <ellipse cx="92.5" cy="60" rx="3.6" ry="5.2" fill="url(#gSkin)"/><ellipse cx="127.5" cy="60" rx="3.6" ry="5.2" fill="url(#gSkin)"/>
+    <ellipse cx="110" cy="58" rx="17" ry="20" fill="url(#gSkin)"/>
+    <path d="M95 66 C98 76 104 79 110 79 C116 79 122 76 125 66 C121 72 116 74 110 74 C104 74 99 72 95 66 Z" fill="#7A4E35" opacity=".13"/>
+    <path d="M92.5 55 C90 37 101 30 112 30.5 C124 31 132 39 128.5 55 C126 47 120 42.5 112 43.5 C104 44 96.5 48 92.5 55 Z" fill="url(#gHair)"/>
+    <path d="M99 38 C107 27 124 28 129 39 C121 34.5 110 34 99 38 Z" fill="url(#gHair)"/>
+    <path d="M101 51.5 Q104 49.5 107.5 51" stroke="#3A2A20" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+    <path d="M113 51 Q116.5 49.5 119.5 51.5" stroke="#3A2A20" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="104.3" cy="56.5" rx="2.2" ry="2.6" fill="#2B2320"/><circle cx="105" cy="55.7" r=".75" fill="#fff"/>
+    <ellipse cx="116.3" cy="56.5" rx="2.2" ry="2.6" fill="#2B2320"/><circle cx="117" cy="55.7" r=".75" fill="#fff"/>
+    <path d="M110.3 58.5 Q108.4 63.5 110.8 64.2" stroke="#B9785A" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+    <path d="M104.2 68 Q110.4 72.6 116.6 68" stroke="#9C4E3A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <ellipse cx="100" cy="64" rx="3.2" ry="2" fill="#F2A08A" opacity=".35"/><ellipse cx="121" cy="64" rx="3.2" ry="2" fill="#F2A08A" opacity=".35"/>
+    <ellipse cx="103" cy="47" rx="5" ry="3" fill="#fff" opacity=".18"/>`; }
+function helperSVG(mode){
+  const wave = mode==='wave';
+  const leftArm = wave
+    ? `<g class="genie-wave"><path d="M85 97 L68 102" stroke="url(#gShirt)" stroke-width="13" stroke-linecap="round"/><path d="M68 102 L61.5 81" stroke="url(#gSkin)" stroke-width="9.5" stroke-linecap="round"/><ellipse cx="60.5" cy="74.5" rx="6" ry="7" fill="url(#gSkin)"/><path d="M55.5 72 L54 66 M58.5 69.5 L58 63.5 M62 69.5 L62.5 64 M65 72 L66.5 67" stroke="#E8B08C" stroke-width="2.6" stroke-linecap="round"/></g>`
+    : '';
+  return `
+  <path d="M88 150 C93 133 99 126 104 121 L116 121 C121 126 127 133 132 150 Z" fill="url(#gBeam)"/>
+  <g class="${wave?'genie-bob':''}">
+    <g filter="url(#fSoft)">
+      <g mask="url(#mFade)">
+        <path d="M80 100 C80 90 92 86 110 86 C128 86 140 90 140 100 L144 142 C130 152 90 152 76 142 Z" fill="url(#gShirt)"/>
+        <path d="M84 98 C86 92 94 89 102 88 C96 94 90 104 88 118 Z" fill="#fff" opacity=".14"/>
+        <path d="M101 86.5 L110 96 L119 86.5" fill="${SKIN_SHADE}"/>
+        <path d="M95 98 L104 87 M125 98 L116 87" stroke="#D9AE78" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M93 98 L127 98 L131 146 C120 151 100 151 89 146 Z" fill="url(#gApron)"/>
+        <path d="M93 98 L96 98 L94 146 L89 146 Z" fill="#fff" opacity=".15"/>
+        <path d="M105 106 L103.2 95.5" stroke="#B9814B" stroke-width="2" stroke-linecap="round"/><ellipse cx="102.8" cy="93.2" rx="2.4" ry="3.4" fill="#C99159"/>
+        <path d="M114.5 106 L116.3 95" stroke="#F2B53A" stroke-width="2.3" stroke-linecap="round"/><path d="M116.3 95 L116.7 92.6" stroke="#4A3A2C" stroke-width="1.6" stroke-linecap="round"/>
+        <rect x="100.5" y="104" width="19" height="12" rx="2" fill="#B98552" opacity=".35"/>
+        <rect x="78" y="122" width="64" height="8.5" rx="3" fill="url(#gBelt)"/>
+        <rect x="106" y="120.8" width="8.5" height="11" rx="1.6" fill="none" stroke="#E0BE72" stroke-width="1.8"/>
+        <path d="M86.5 129 L84 110" stroke="#A8743F" stroke-width="3.2" stroke-linecap="round"/><rect x="77.5" y="105.5" width="13" height="5.5" rx="1.6" fill="url(#gMetal)" transform="rotate(-8 84 108)"/>
+        <path d="M79.5 128 L95 128 L94 141 C91 145 84 145 81 141 Z" fill="url(#gBelt)"/>
+        <path d="M80 131 L94.5 131" stroke="#E0BE72" stroke-width=".9" stroke-dasharray="2 1.6" opacity=".7"/>
+        <path d="M134 129 L137.5 144" stroke="url(#gMetal)" stroke-width="3.4" stroke-linecap="round"/><circle cx="138" cy="146.5" r="3.6" fill="url(#gMetal)"/><circle cx="138.6" cy="148" r="1.4" fill="#F4F6F8"/>
+        <path d="M136 97 L150.5 112" stroke="url(#gShirt)" stroke-width="13" stroke-linecap="round"/>
+        <path d="M150.5 112 L141.5 123.5" stroke="url(#gSkin)" stroke-width="9.5" stroke-linecap="round"/>
+        <ellipse cx="139.5" cy="125.5" rx="5.6" ry="5" fill="url(#gSkin)"/>
+      </g>
+      ${leftArm}
+      ${headSVG()}
+    </g>
+  </g>`;
+}
+const HERO = `
+  <ellipse cx="100" cy="208" rx="66" ry="6.5" fill="rgba(24,35,46,.12)"/>
+  <circle cx="110" cy="84" r="70" fill="url(#gGlow)"/>
+  ${helperSVG('wave')}
+  <rect x="73" y="189" width="54" height="11" rx="5.5" fill="url(#gBase)"/>
+  <path d="M42 170 C21 168 21 149 46 156" stroke="url(#gLampDk)" stroke-width="6.5" fill="none" stroke-linecap="round"/>
+  <path d="M38 176 C38 156 68 148 100 148 C128 148 146 153 158 160 L184 148 C189 146 192 151 188 155 L166 172 C160 185 138 192 100 192 C64 192 38 190 38 176 Z" fill="url(#gLamp)"/>
+  <path d="M38 176 C38 156 68 148 100 148 C128 148 146 153 158 160 L184 148 C189 146 192 151 188 155 L166 172 C160 185 138 192 100 192 C64 192 38 190 38 176 Z" fill="url(#gLampShade)"/>
+  <path d="M46 181 C74 189 128 189 160 178" stroke="#FFE9B8" stroke-width="2.2" fill="none" opacity=".9"/>
+  <path d="M52 168 C60 159 78 156 98 156" stroke="#fff" stroke-width="4.5" stroke-linecap="round" fill="none" opacity=".75"/>
+  <ellipse cx="72" cy="172" rx="9" ry="4" fill="#fff" opacity=".35"/>
+  <ellipse cx="100" cy="149" rx="28" ry="6" fill="url(#gLampDk)"/>
+  <ellipse cx="100" cy="148" rx="20" ry="3.4" fill="#FFE7B0" opacity=".9"/>`;
+const HEAD = `<svg viewBox="88 28 44 44" aria-hidden="true"><rect x="88" y="28" width="44" height="44" fill="#EAF2F7"/>${headSVG()}</svg>`;
+document.getElementById('heroGenie').innerHTML = HERO;
+document.getElementById('dealHelper').innerHTML = helperSVG('shake');
+document.querySelectorAll('[data-head]').forEach(el => el.innerHTML = HEAD);
+
+const ICON = {
+  task:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11l2 2 4-4"/><rect x="4" y="4" width="16" height="16" rx="4"/></svg>',
+  user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>',
+  pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+  time:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>',
+  size:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9V4h5M20 15v5h-5M4 4l6 6M20 20l-6-6"/></svg>',
+  tool:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5.5a4 4 0 0 0-5 5L4 16l4 4 5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5 2.5-2.5z"/></svg>',
+  euro:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 6a7 7 0 1 0 0 12M4 10h9M4 14h9"/></svg>',
+  check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>',
+  down:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>'
+};
+
+const TASKS = {
+  rasen:{title:'Rasen mähen', cat:'Garten', say:'Ich muss Rasen mähen',
+    umfang:{q:'Wie groß ist die Rasenfläche ungefähr?', opts:['Mittel, etwa 200 m²','Klein, bis 100 m²','Groß, über 400 m²']},
+    extra:{q:'Ist ein Rasenmäher vor Ort?', opts:['Ja, Mäher ist da','Nein, bitte mitbringen']}, range:[25,35]},
+  einkauf:{title:'Wocheneinkauf', cat:'Einkauf', say:'Ich brauche jemanden für den Einkauf',
+    umfang:{q:'Wie viel ist es ungefähr?', opts:['Ein bis zwei Taschen','Großer Wocheneinkauf','Mit Getränkekisten']},
+    extra:{q:'Wie wird bezahlt?', opts:['Helfer streckt vor','Geld liegt bereit']}, range:[10,15]},
+  lampe:{title:'Lampe aufhängen', cat:'Handwerk', say:'Kann jemand eine Lampe aufhängen?',
+    umfang:{q:'Wie viele Lampen sind es?', opts:['Eine Lampe','Zwei bis drei','Mehr als drei']},
+    extra:{q:'Ist eine Leiter da?', opts:['Ja, Leiter ist da','Nein, bitte mitbringen']}, range:[20,30]}
+};
+
+const S = {};
+function resetState(){
+  Object.assign(S,{task:'rasen', fuer:'Für meine Mutter Gisela', ort:'Gartenstraße 5, 34119 Kassel', umfang:'Mittel, etwa 200 m²',
+    extra:'Ja, Mäher ist da', wann:'Sa, 31.10., 9–12 Uhr', min:25, max:35, sent:false, offer:30, counter:38, jobId:'mine'});
+}
+resetState();
+const T = () => TASKS[S.task];
+
+/* Navigation */
+const tabFor = {home:'home', profil:'home', chat:'hilfe', summary:'hilfe', gegen:'hilfe', deal:'hilfe', monitor:'helfer', job:'helfer'};
+let current = 'home';
+function go(id){
+  if(id==='chat' && current!=='chat') startChat();
+  if(id==='summary') renderSummary();
+  if(id==='monitor') renderMonitor();
+  if(id==='job') renderJob();
+  if(id==='gegen') renderGegen();
+  if(id==='deal') renderDeal();
+  document.querySelectorAll('.screen').forEach(s => { s.hidden = s.id!==id; s.classList.remove('enter'); });
+  const scr = document.getElementById(id); void scr.offsetWidth; scr.classList.add('enter'); scr.scrollTop = 0;
+  document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-current', t.dataset.tab===tabFor[id]));
+  document.querySelectorAll('#steps button').forEach(b => b.setAttribute('aria-current', b.dataset.go===id));
+  if(id!=='summary') glow(null);
+  current = id;
+}
+function glow(which){
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('glow', t.dataset.tab===which));
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-go]'); if(!b) return;
+  if(b.closest('#steps') && b.dataset.go==='chat') current = '';
+  go(b.dataset.go);
+});
+
+/* Profil */
+document.querySelectorAll('[data-seg] .chip').forEach(c => c.addEventListener('click', () => c.setAttribute('aria-pressed', c.getAttribute('aria-pressed')!=='true')));
+document.getElementById('saveProfile').addEventListener('click', () => {
+  document.getElementById('homeSpeech').innerHTML = 'Profil gespeichert. Super, <b>Alexander</b>! Wobei kann ich heute helfen?';
+  go('home');
+});
+
+/* Chat */
+const log = document.getElementById('log'), opts = document.getElementById('opts'), mic = document.getElementById('mic'), microw = document.getElementById('microw');
+const chatScreen = document.getElementById('chat');
+let timers = [], pending = null, run = 0;
+function later(fn, ms){ const r = run; timers.push(setTimeout(() => { if(r===run) fn(); }, ms)); }
+function scrollDown(){ chatScreen.scrollTo({top:chatScreen.scrollHeight, behavior:'smooth'}); }
+function genieSay(html, cb, wait=650){
+  const t = document.createElement('div'); t.className='msg genie';
+  t.innerHTML = `<div class="avatar">${HEAD}</div><div class="bubble typing"><span></span><span></span><span></span></div>`;
+  log.appendChild(t); scrollDown();
+  later(() => { t.querySelector('.bubble').className='bubble'; t.querySelector('.bubble').innerHTML = html; scrollDown(); cb && cb(t); }, wait);
+}
+function userSay(text, spoken){
+  const m = document.createElement('div'); m.className='msg user';
+  m.innerHTML = `<div class="bubble">${text}${spoken?'<span class="via">gesprochen</span>':''}</div>`;
+  log.appendChild(m); scrollDown();
+}
+function offer(list, handler){
+  opts.innerHTML=''; pending = {list, handler};
+  list.forEach(o => { const c = document.createElement('button'); c.className='chip'; c.textContent=o; c.onclick=()=>answer(o,false); opts.appendChild(c); });
+}
+function answer(o, spoken){
+  if(!pending) return; const h = pending.handler; pending=null; opts.innerHTML='';
+  userSay(o, spoken); later(() => h(o), 350);
+}
+mic.addEventListener('click', () => {
+  if(!pending || mic.classList.contains('listening')) return;
+  mic.classList.add('listening'); microw.classList.add('listening-on');
+  const pick = pending.list[0];
+  later(() => { mic.classList.remove('listening'); microw.classList.remove('listening-on'); answer(pick, true); }, 1300);
+});
+
+function startChat(){
+  run++; timers.forEach(clearTimeout); timers=[]; log.innerHTML=''; opts.innerHTML=''; pending=null;
+  mic.classList.remove('listening'); microw.classList.remove('listening-on');
+  S.sent=false;
+  genieSay('Hallo! Was soll erledigt werden? Sprich einfach drauf los.', () => {
+    offer(Object.values(TASKS).map(t=>t.say), o => {
+      S.task = Object.keys(TASKS).find(k => TASKS[k].say===o);
+      [S.min,S.max] = T().range;
+      askFuer();
+    });
+  }, 500);
+}
+function askFuer(){
+  genieSay(`Mach ich. <b>${T().title}</b>, verstanden. Für wen ist der Auftrag?`, () => offer(['Für meine Mutter Gisela','Für mich'], o => { S.fuer=o; askOrt(); }));
+}
+function askOrt(){
+  const mine='Lindenweg 12, 34117 Kassel', mum='Gartenstraße 5, 34119 Kassel';
+  const q = S.fuer==='Für mich' ? 'Wo soll das passieren?' : 'Wo wohnt Gisela? Ich habe diese Adresse gespeichert.';
+  genieSay(q, () => offer(S.fuer==='Für mich'?[mine,mum]:[mum,mine], o => { S.ort=o; askUmfang(); }));
+}
+function askUmfang(){ genieSay(T().umfang.q, () => offer(T().umfang.opts, o => { S.umfang=o; askExtra(); })); }
+function askExtra(){ genieSay(T().extra.q, () => offer(T().extra.opts, o => { S.extra=o; askWann(); })); }
+function askWann(){ genieSay('Wann passt es am besten?', () => offer(['Sa, 31.10., 9–12 Uhr','Mo, 2.11., ab 16 Uhr','Egal, diese Woche'], o => { S.wann=o; askPreis(); })); }
+function askPreis(){
+  const [a,b] = T().range;
+  genieSay(`Und was darf es ungefähr kosten? In Kassel sind <b>${a} bis ${b} €</b> üblich.
+    <div class="price-box">
+      <div class="price-row"><span>von</span><div class="stepper"><button data-p="min" data-d="-5" aria-label="weniger">−</button><output id="pMin">${S.min} €</output><button data-p="min" data-d="5" aria-label="mehr">+</button></div></div>
+      <div class="price-row"><span>bis</span><div class="stepper"><button data-p="max" data-d="-5" aria-label="weniger">−</button><output id="pMax">${S.max} €</output><button data-p="max" data-d="5" aria-label="mehr">+</button></div></div>
+      <button class="btn primary" id="pOk" style="padding:11px;font-size:16px">Preisrahmen übernehmen</button>
+    </div>`, (el) => {
+      el.querySelectorAll('[data-p]').forEach(btn => btn.onclick = () => {
+        const k = btn.dataset.p, d = +btn.dataset.d;
+        S[k] = Math.max(5, S[k]+d);
+        if(S.min > S.max){ if(k==='min') S.max=S.min; else S.min=S.max; }
+        el.querySelector('#pMin').textContent = S.min+' €'; el.querySelector('#pMax').textContent = S.max+' €';
+      });
+      const ok = el.querySelector('#pOk');
+      const finish = (spoken) => { ok.disabled=true; el.querySelectorAll('[data-p]').forEach(x=>x.disabled=true); pending=null; opts.innerHTML='';
+        userSay(`${S.min} bis ${S.max} €`, spoken);
+        later(() => genieSay('Danke, ich habe alles zusammengefasst.', () => later(() => go('summary'), 900)), 350); };
+      ok.onclick = () => finish(false);
+      pending = {list:['__price'], handler:null};
+      mic.onclickPrice = finish;
+    });
+}
+// Mikrofon beim Preis: bestätigt den Rahmen
+mic.addEventListener('click', () => {
+  if(pending && pending.list[0]==='__price'){ const f = mic.onclickPrice; pending=null; mic.classList.add('listening'); microw.classList.add('listening-on');
+    later(() => { mic.classList.remove('listening'); microw.classList.remove('listening-on'); f(true); }, 1300); }
+}, true);
+
+/* Zusammenfassung */
+function rows(list){ return list.map(([ic,lab,val]) => `<div class="row">${ICON[ic]}<div><small>${lab}</small><span>${val}</span></div></div>`).join(''); }
+function whoText(){ return S.fuer==='Für mich' ? 'Für mich' : 'Für Gisela H. (Mutter)'; }
+function renderSummary(){
+  document.getElementById('sumCard').innerHTML =
+    `<div class="top"><b>${T().title}</b><span class="badge cat">${T().cat}</span></div>` +
+    rows([['user','Für wen',whoText()],['pin','Adresse',S.ort],['time','Wann',S.wann],['size','Umfang',S.umfang],['tool','Hinweis',S.extra],['euro','Preisrahmen',`${S.min} bis ${S.max} €`]]);
+  const btn = document.getElementById('sendBtn');
+  btn.disabled = S.sent;
+  btn.innerHTML = S.sent ? ICON.check+'Gesendet' : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l16-8-6 16-3-6-7-2z"/></svg>Absenden';
+  document.getElementById('sentArea').innerHTML = S.sent ? sentHTML() : '';
+  glow(S.sent ? 'helfer' : null);
+}
+function sentHTML(){
+  return `<div class="sent-note">${ICON.check}<div>4 Helfer im Umkreis von 5 km sehen deinen Auftrag jetzt. Ich melde mich, sobald jemand zusagt.</div></div>
+  <div class="pointer">Mockup: unten auf „Helfer“ tippen ${ICON.down}</div>`;
+}
+document.getElementById('sendBtn').addEventListener('click', () => { S.sent = true; renderSummary(); const s=document.getElementById('summary'); s.scrollTo({top:s.scrollHeight,behavior:'smooth'}); });
+
+/* Auftragsmonitor */
+const CATS = ['Garten','Einkauf','Handwerk','Technik','Begleitung','Tiere'];
+const active = new Set(CATS);
+function jobs(){
+  return [
+    {id:'mine', title:T().title, cat:T().cat, km:1.2, wann:S.wann, min:S.min, max:S.max, who: S.fuer==='Für mich'?'Alexander H.':'für Gisela H., angelegt von Alexander', fresh:S.sent, umfang:S.umfang, extra:S.extra, ort:S.ort.split(',')[0]},
+    {id:'e1', title:'Wocheneinkauf', cat:'Einkauf', km:0.8, wann:'Morgen, 10 Uhr', min:10, max:15, who:'Herr Brandt', umfang:'Ein bis zwei Taschen', extra:'Geld liegt bereit', ort:'Fasanenhof'},
+    {id:'t1', title:'WLAN-Router einrichten', cat:'Technik', km:2.4, wann:'Do, 29.10., abends', min:20, max:30, who:'Familie Özdemir', umfang:'Ein Gerät', extra:'Router ist schon da', ort:'Wehlheiden'},
+    {id:'h1', title:'Hund ausführen', cat:'Tiere', km:0.5, wann:'Mo–Fr, 12 Uhr', min:8, max:10, who:'Lena S. (Schichtdienst)', umfang:'45 Minuten', extra:'Leine liegt bereit', ort:'Vorderer Westen'},
+    {id:'r1', title:'Regal aufbauen', cat:'Handwerk', km:3.1, wann:'Sa, 31.10., nachmittags', min:30, max:45, who:'Tom R.', umfang:'Ein großes Regal', extra:'Werkzeug bitte mitbringen', ort:'Kirchditmold'},
+    {id:'b1', title:'Begleitung zum Arzt', cat:'Begleitung', km:4.0, wann:'Di, 3.11., 9 Uhr', min:15, max:20, who:'für Ursula M., angelegt von Tochter', umfang:'etwa 2 Stunden', extra:'Mit dem Bus', ort:'Bad Wilhelmshöhe'},
+    {id:'g2', title:'Hecke schneiden', cat:'Garten', km:7.5, wann:'Nächste Woche', min:40, max:60, who:'Herr Kowalski', umfang:'ca. 15 m Hecke', extra:'Grünschnitt abfahren', ort:'Vellmar'}
+  ];
+}
+const filters = document.getElementById('filters');
+CATS.forEach(c => { const b = document.createElement('button'); b.className='chip'; b.textContent=c; b.setAttribute('aria-pressed','true');
+  b.onclick = () => { active.has(c)?active.delete(c):active.add(c); b.setAttribute('aria-pressed', active.has(c)); renderMonitor(); }; filters.appendChild(b); });
+document.getElementById('radius').addEventListener('change', renderMonitor);
+function fmtKm(k){ return k.toString().replace('.',',')+' km'; }
+function renderMonitor(){
+  const r = +document.getElementById('radius').value;
+  const list = jobs().filter(j => active.has(j.cat) && j.km<=r);
+  document.getElementById('count').textContent = list.length===1 ? '1 Auftrag' : list.length+' Aufträge';
+  const box = document.getElementById('jobs');
+  box.innerHTML = list.length ? '' : '<div class="empty">Keine Aufträge für diesen Filter. Wähle mehr Kategorien oder einen größeren Umkreis.</div>';
+  list.forEach(j => {
+    const b = document.createElement('button'); b.className = 'job'+(j.fresh?' fresh':'');
+    b.innerHTML = `<b>${j.title}</b><span class="price">${j.min}–${j.max} €</span>
+      <span class="meta"><span>${fmtKm(j.km)} · ${j.ort}</span><span>${j.wann}</span></span>
+      <span class="tags">${j.fresh?'<span class="badge new">Neu</span>':''}<span class="badge cat">${j.cat}</span></span>`;
+    b.onclick = () => { S.jobId = j.id; S.offer = Math.round((j.min+j.max)/2); go('job'); };
+    box.appendChild(b);
+  });
+}
+
+/* Auftragsdetail */
+function curJob(){ return jobs().find(j => j.id===S.jobId) || jobs()[0]; }
+function renderJob(){
+  const j = curJob();
+  if(S.offer==null) S.offer = Math.round((j.min+j.max)/2);
+  const body = document.getElementById('jobBody');
+  body.innerHTML = `
+    <h2>${j.title}</h2>
+    <p class="sub">${j.who}</p>
+    <div class="mapbox"><svg viewBox="0 0 340 110" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="340" height="110" fill="#E4EEE6"/><path d="M0 70 C80 60 120 90 200 70 S300 40 340 50" stroke="#fff" stroke-width="10" fill="none"/>
+      <path d="M150 0 L170 110" stroke="#fff" stroke-width="7"/><rect x="30" y="14" width="60" height="34" rx="6" fill="#D3E5D7"/><rect x="230" y="70" width="70" height="30" rx="6" fill="#D3E5D7"/>
+      <circle cx="210" cy="48" r="26" fill="rgba(23,134,107,.15)"/><path d="M210 52s-10-9-10-16a10 10 0 0 1 20 0c0 7-10 16-10 16z" fill="#17866B"/><circle cx="210" cy="36" r="3.5" fill="#fff"/>
+    </svg></div>
+    <div class="summary" style="margin-bottom:12px">${rows([['pin','Ort',`${j.ort} · ${fmtKm(j.km)} entfernt`],['time','Wann',j.wann],['size','Umfang',j.umfang],['tool','Hinweis',j.extra]])}</div>
+    <div class="offer">
+      <div class="range">Preisrahmen des Auftraggebers: <b>${j.min} bis ${j.max} €</b></div>
+      <div class="price-row"><b>Dein Preis</b><div class="stepper"><button id="oMinus" aria-label="weniger">−</button><output id="oVal">${S.offer} €</output><button id="oPlus" aria-label="mehr">+</button></div></div>
+      <div class="verdict" id="verdict"></div>
+    </div>
+    <button class="btn" id="oGo"></button>`;
+  const upd = () => {
+    const ok = S.offer>=j.min && S.offer<=j.max;
+    body.querySelector('#oVal').textContent = S.offer+' €';
+    const v = body.querySelector('#verdict'), g = body.querySelector('#oGo');
+    v.className = 'verdict '+(ok?'ok':'counter');
+    v.textContent = ok ? 'Passt in den Rahmen. Der Auftrag ist sofort deiner.' : 'Liegt außerhalb. Das geht als Gegenvorschlag an den Auftraggeber.';
+    g.className = 'btn '+(ok?'primary':'helper');
+    g.innerHTML = ok ? ICON.check+`Für ${S.offer} € annehmen` : `Gegenvorschlag ${S.offer} € senden`;
+    g.onclick = () => { if(ok){ S.final=S.offer; go('deal'); } else { S.counter=S.offer; go('gegen'); } };
+  };
+  body.querySelector('#oMinus').onclick = () => { S.offer=Math.max(5,S.offer-1); upd(); };
+  body.querySelector('#oPlus').onclick = () => { S.offer+=1; upd(); };
+  upd();
+}
+
+/* Gegenvorschlag */
+function renderGegen(){
+  const j = curJob();
+  if(!(S.counter<j.min || S.counter>j.max)) S.counter = j.max+3;
+  document.getElementById('gegenText').innerHTML = `Jonas würde <b>${j.title.toLowerCase()==='rasen mähen'?'den Rasen mähen':j.title}</b> übernehmen. Er schlägt <b>${S.counter} €</b> vor, dein Rahmen war ${j.min} bis ${j.max} €.`;
+  document.getElementById('gegenCard').innerHTML = `
+    <div class="me-pic">J</div>
+    <div><b>Jonas K.</b><br><small style="color:var(--muted)">${fmtKm(j.km)} entfernt · ${j.wann}</small></div>
+    <div class="tags"><span class="badge soon">Prüfung: kommt später</span><span class="badge soon">Bewertungen: kommt später</span></div>
+    <div class="bigprice"><span>Gegenvorschlag</span><span><s>${j.min}–${j.max} €</s>&nbsp; <strong>${S.counter} €</strong></span></div>`;
+  const a = document.getElementById('acceptCounter');
+  a.innerHTML = ICON.check+`${S.counter} € annehmen`;
+  a.onclick = () => { S.final=S.counter; go('deal'); };
+  const d = document.getElementById('declineCounter');
+  d.textContent = 'Ablehnen, auf andere warten';
+  d.onclick = () => { document.getElementById('gegenText').innerHTML = 'Alles klar, ich habe Jonas abgesagt und warte auf weitere Angebote. Du bekommst eine Nachricht.'; a.hidden=true; d.textContent='Zurück zum Start'; d.onclick=()=>{a.hidden=false; go('home');}; };
+  a.hidden=false;
+}
+
+/* Handschlag */
+function renderDeal(){
+  const j = curJob(); const price = S.final ?? S.offer ?? j.max;
+  document.getElementById('dealSub').textContent = `Jonas und ${j.id==='mine' ? (S.fuer==='Für mich'?'du':'Gisela') : j.who.split(',')[0]} haben eine Abmachung.`;
+  document.getElementById('dealCard').innerHTML = rows([['task','Auftrag',j.title],['pin','Adresse',j.id==='mine'?S.ort:j.ort],['time','Wann',j.wann],['euro','Vereinbarter Preis',price+' €'],['user','Helfer','Jonas K.']]);
+}
+document.getElementById('restart').addEventListener('click', () => { resetState(); current=''; go('chat'); });
+
+go('home');
+})();
+</script>
+
+</body></html>
