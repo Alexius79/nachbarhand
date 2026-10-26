@@ -27,9 +27,17 @@ Diese Links funktionieren nur für Alexander (privat bei Claude):
 - Projekthandbuch: https://claude.ai/artifact/LjmEC3wqi8KE2JkTok7LfA
 - Marktrecherche: https://claude.ai/artifact/JgSBcnHBkpefQat4Wwm9ox
 
+## Notion-Arbeitsbereich
+
+Die Projektarbeit (Aufgaben, offene Prüfpunkte, aktueller Status, Dokumentenliste) läuft in Notion auf der Seite **Nachbar-Hand**: https://app.notion.com/p/405d1f4bfbc280d7abceca57b38a5b7a
+
+Der Link funktioniert nur für Personen, die Alexander in Notion eingeladen hat. Die Inhalte dort verweisen auf die Dateien in diesem Repo.
+
 ## Mockup ansehen
 
-Datei `mockup/index.html` auf GitHub öffnen, oben rechts auf „Download raw file“ klicken und die Datei im Browser öffnen. Am besten in der Handy-Ansicht.
+Direkt im Browser: https://htmlpreview.github.io/?https://github.com/Alexius79/nachbarhand/blob/main/mockup/index.html
+
+Falls das nicht lädt: Datei `mockup/index.html` auf GitHub öffnen, oben rechts auf „Download raw file“ klicken und die Datei im Browser öffnen. Am besten in der Handy-Ansicht.
 
 ## Nächste Schritte
 
